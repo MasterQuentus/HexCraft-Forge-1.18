@@ -1,9 +1,33 @@
 package com.masterquentus.hexcraft.block.custom;
 
-import net.minecraft.world.level.block.WeepingVinesBlock;
+import com.masterquentus.hexcraft.block.ModBlocks;
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class WitchesLadderBlock extends WeepingVinesBlock {
-    public WitchesLadderBlock(Properties p_154966_) {
-        super(p_154966_);
+import java.util.Random;
+
+public class WitchesLadderBlock extends GrowingPlantHeadBlock implements BonemealableBlock {
+    protected static final VoxelShape SHAPE = Block.box(4.0D, 9.0D, 4.0D, 12.0D, 16.0D, 12.0D);
+
+    public WitchesLadderBlock(BlockBehaviour.Properties p_154966_) {
+        super(p_154966_, Direction.DOWN, SHAPE, false, 0.1D);
+    }
+
+    /**
+     * Used to determine how much to grow the plant when using bonemeal.
+     */
+    protected int getBlocksToGrowWhenBonemealed(Random p_154968_) {
+        return NetherVines.getBlocksToGrowWhenBonemealed(p_154968_);
+    }
+
+    protected Block getBodyBlock() {
+        return ModBlocks.WITCHES_LADDER_PLANT.get();
+    }
+
+    protected boolean canGrowInto(BlockState p_154971_) {
+        return NetherVines.isValidGrowthState(p_154971_);
     }
 }

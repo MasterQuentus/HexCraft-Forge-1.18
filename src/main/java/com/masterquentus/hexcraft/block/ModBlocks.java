@@ -309,13 +309,13 @@ public class ModBlocks {
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
                     .instabreak().noOcclusion()));
 
-    public static final RegistryObject<Block> WITCHES_LADDER = registerBlock("witches_ladder",
+    public static final RegistryObject<Block> WITCHES_LADDER = BLOCKS.register("witches_ladder",
             () -> new WitchesLadderBlock(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES)
-                    .instabreak().noOcclusion().randomTicks()), ModCreativeModeTab.HEXCRAFT_TAB);
+                    .instabreak().noOcclusion().randomTicks()));
 
-    public static final RegistryObject<Block> WITCHES_LADDER_PLANT = registerBlock("witches_ladder_plant",
+    public static final RegistryObject<Block> WITCHES_LADDER_PLANT = BLOCKS.register("witches_ladder_plant",
             () -> new WitchesLadderPlant(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES)
-                    .instabreak().noOcclusion()), ModCreativeModeTab.HEXCRAFT_TAB);
+                    .instabreak().noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutItem(String name, Supplier<T> block) {
       return  BLOCKS.register(name, block);

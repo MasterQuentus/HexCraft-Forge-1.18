@@ -1,7 +1,10 @@
 package com.masterquentus.hexcraft.block.custom;
 
 import com.masterquentus.hexcraft.block.ModBlocks;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -21,6 +24,11 @@ public class WitchesLadderBlock extends GrowingPlantHeadBlock implements Bonemea
      */
     protected int getBlocksToGrowWhenBonemealed(Random p_154968_) {
         return NetherVines.getBlocksToGrowWhenBonemealed(p_154968_);
+    }
+
+    @Override
+    public boolean isLadder(BlockState state, LevelReader level, BlockPos pos, LivingEntity entity) {
+        return true;
     }
 
     protected Block getBodyBlock() {

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "hexcraft:pearl_stone_wall",
+    "hexcraft:pearl_cobblestone_wall",
+    "hexcraft:pearl_stone_bricks_wall",
+    "hexcraft:polished_pearl_stone_wall"
+
+  ]
+}

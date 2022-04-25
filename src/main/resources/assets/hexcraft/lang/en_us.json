@@ -1,0 +1,96 @@
+{
+  //Items
+  "item.hexcraft.infused_fabric": "Infused Fabric",
+
+  //Blocks
+  "block.hexcraft.pearl_stone": "Pearlstone",
+  "block.hexcraft.pearl_cobblestone": "Pearl Cobblestone",
+  "block.hexcraft.pearl_stone_bricks": "Pearlstone Bricks",
+  "block.hexcraft.polished_pearl_stone": "Polished Pearlstone",
+  "block.hexcraft.chiseled_pearl_stone": "Chiseled Pearlstone",
+  "block.hexcraft.cracked_pearl_stone": "Cracked Pearlstone",
+  "block.hexcraft.ember_moss_block": "Ember Moss",
+  "block.hexcraft.ember_moss_carpet": "Ember Moss Carpet",
+
+
+  //Stairs
+  "block.hexcraft.pearl_stone_stairs": "Pearlstone Stairs",
+  "block.hexcraft.pearl_cobblestone_stairs": "Pearl Cobblestone Stairs",
+  "block.hexcraft.pearl_stone_bricks_stairs": "Pearlstone Brick Stairs",
+  "block.hexcraft.polished_pearl_stone_stairs": "Polished Pearlstone Stairs",
+  "block.hexcraft.blood_oak_stairs": "Blood Oak Stairs",
+  "block.hexcraft.ebony_stairs": "Ebony Stairs",
+
+  //Slabs
+  "block.hexcraft.pearl_stone_slab": "Pearlstone Slab",
+  "block.hexcraft.pearl_cobblestone_slab": "Pearl Cobblestone Slab",
+  "block.hexcraft.pearl_stone_bricks_slab": "Pearlstone Brick Slab",
+  "block.hexcraft.polished_pearl_stone_slab": "Polished Pearlstone Slab",
+  "block.hexcraft.ebony_slab": "Ebony Slab",
+  "block.hexcraft.blood_oak_slab": "Blood Oak Slab",
+
+  //Walls
+  "block.hexcraft.pearl_stone_wall": "Pearlstone Wall",
+  "block.hexcraft.pearl_cobblestone_wall": "Pearl Cobblestone Wall",
+  "block.hexcraft.pearl_stone_bricks_wall": "Pearlstone Brick Wall",
+  "block.hexcraft.polished_pearl_stone_wall": "Polished Pearlstone Wall",
+
+  //Logs
+  "block.hexcraft.stripped_ebony_wood": "Stripped Ebony Wood",
+  "block.hexcraft.stripped_ebony_log": "Stripped Ebony Log",
+  "block.hexcraft.ebony_wood": "Ebony Wood",
+  "block.hexcraft.ebony_log": "Ebony Log",
+  "block.hexcraft.stripped_blood_oak_wood": "Stripped Blood Oak Wood",
+  "block.hexcraft.stripped_blood_oak_log": "Stripped Blood Oak Log",
+  "block.hexcraft.blood_oak_wood": "Blood Oak Wood",
+  "block.hexcraft.blood_oak_log": "Blood Oak Log",
+
+  //Planks
+  "block.hexcraft.ebony_planks": "Ebony Planks",
+  "block.hexcraft.blood_oak_planks": "Blood Oak Planks",
+
+  //Pressure Plates
+  "block.hexcraft.ebony_pressure_plate": "Ebony Pressure Plate",
+  "block.hexcraft.blood_oak_pressure_plate": "Blood Oak Pressure Plate",
+
+  //Saplings
+  "block.hexcraft.ebony_sapling": "Ebony Sapling",
+  "block.hexcraft.blood_oak_sapling": "Blood Oak Sapling",
+
+  //Button
+  "block.hexcraft.ebony_button": "Ebony Button",
+  "block.hexcraft.blood_oak_button": "Blood Oak Button",
+  //Doors
+  "block.hexcraft.ebony_door": "Ebony Door",
+  "block.hexcraft.blood_oak_door": "Blood Oak Door",
+
+  //Trapdoors
+  "block.hexcraft.ebony_trapdoor": "Ebony Trapdoor",
+  "block.hexcraft.blood_oak_trapdoor": "Blood Oak Trapdoor",
+
+  //Bookshelfs
+  "block.hexcraft.ebony_bookshelf": "Ebony Bookshelf",
+  "block.hexcraft.blood_oak_bookshelf": "Blood Oak Bookshelf",
+
+  //Fence
+  "block.hexcraft.ebony_fence": "Ebony Fence",
+  "block.hexcraft.blood_oak_fence": "Blood Oak Fence",
+
+  //Fence Gate
+  "block.hexcraft.ebony_fence_gate": "Ebony Fence Gate",
+  "block.hexcraft.blood_oak_fence_gate": "Blood Oak Fence Gate",
+
+  //Leaves
+  "block.hexcraft.ebony_leaves": "Ebony Leaves",
+  "block.hexcraft.blood_oak_leaves": "Blood Oak Wood Leaves",
+
+  //plants
+  "block.hexcraft.bloody_rose": "Bloody Rose",
+  "block.hexcraft.potted_bloody_rose": "Potted Bloody Rose",
+  "item.hexcraft.witches_ladder": "Witches Ladder",
+  "block.hexcraft.witches_ladder": "Witches Ladder",
+  "block.hexcraft.witches_ladder_plant": "Witches Ladder",
+
+  //CreativeTab
+   "itemGroup.hexcrafttab": "Hexcraft"
+}

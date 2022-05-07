@@ -1,13 +1,19 @@
 package com.masterquentus.hexcraft;
 
+import com.masterquentus.hexcraft.block.entity.ModBlockEntities;
+import com.masterquentus.hexcraft.block.entity.ModWoodTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.WeepingVinesBlock;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -55,6 +61,12 @@ public class HexCraft {
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WITCHES_LADDER.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WITCHES_LADDER_PLANT.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MANDRAKE_FLOWER.get(), RenderType.cutout());
+
+        BlockEntityRenderers.register(ModBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
+        WoodType.register(ModWoodTypes.EBONY);
+        WoodType.register(ModWoodTypes.Blood_Oak);
     }
 
     @SubscribeEvent
@@ -69,6 +81,8 @@ public class HexCraft {
     private void setup(final FMLCommonSetupEvent event) {
        event.enqueueWork(() ->{
            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BLOODY_ROSE.getId(), ModBlocks.POTTED_BLOODY_ROSE);
+           Sheets.addWoodType(ModWoodTypes.EBONY);
+           Sheets.addWoodType(ModWoodTypes.Blood_Oak);
        });
     }
 }

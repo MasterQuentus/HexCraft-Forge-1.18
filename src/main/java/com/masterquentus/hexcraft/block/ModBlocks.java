@@ -1,8 +1,8 @@
 package com.masterquentus.hexcraft.block;
 
 import com.masterquentus.hexcraft.HexCraft;
-import com.masterquentus.hexcraft.block.custom.WitchesLadderBlock;
-import com.masterquentus.hexcraft.block.custom.WitchesLadderPlant;
+import com.masterquentus.hexcraft.block.custom.*;
+import com.masterquentus.hexcraft.block.entity.ModWoodTypes;
 import com.masterquentus.hexcraft.world.feature.tree.BloodOakTreeGrower;
 import com.masterquentus.hexcraft.world.feature.tree.EbonyTreeGrower;
 import net.minecraft.world.effect.MobEffects;
@@ -15,7 +15,6 @@ import com.masterquentus.hexcraft.item.ModItems;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import com.masterquentus.hexcraft.item.ModCreativeModeTab;
-import com.masterquentus.hexcraft.block.custom.ModFlammableRotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.core.BlockPos;
@@ -290,6 +289,20 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLOOD_OAK_FENCE_GATE = registerBlock("blood_oak_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(2.0F, 3.0F)), ModCreativeModeTab.HEXCRAFT_TAB);
+
+    //Signs
+    public static final RegistryObject<Block> EBONY_WALL_SIGN = registerBlockWithoutBlockItem("ebony_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.EBONY));
+
+    public static final RegistryObject<Block> EBONY_SIGN = registerBlockWithoutBlockItem("ebony_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.EBONY));
+
+    public static final RegistryObject<Block> BLOOD_OAK_WALL_SIGN = registerBlockWithoutBlockItem("blood_oak_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.Blood_Oak));
+
+    public static final RegistryObject<Block> BLOOD_OAK_SIGN = registerBlockWithoutBlockItem("blood_oak_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.Blood_Oak));
+
     //Bookshelves
     public static final RegistryObject<Block> EBONY_BOOKSHELF = registerBlock("ebony_bookshelf",
             () -> new ModBookshelf(BlockBehaviour.Properties.of(Material.WOOD)
@@ -317,9 +330,16 @@ public class ModBlocks {
             () -> new WitchesLadderPlant(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES)
                     .instabreak().noOcclusion()));
 
+    public static final RegistryObject<Block> MANDRAKE_FLOWER = registerBlockWithoutBlockItem("mandrake_flower",
+            () -> new MandrakePlantBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion()));
+
     private static <T extends Block> RegistryObject<T> registerBlockWithoutItem(String name, Supplier<T> block) {
       return  BLOCKS.register(name, block);
 
+    }
+
+    private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
+        return BLOCKS.register(name, block);
     }
 
 

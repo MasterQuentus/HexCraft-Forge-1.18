@@ -13,8 +13,6 @@ public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, HexCraft.MOD_ID);
 
-
-
     public static final RegistryObject<BlockEntityType<ModSignBlockEntity>> SIGN_BLOCK_ENTITIES =
             BLOCK_ENTITIES.register("sign_block_entity", () ->
                     BlockEntityType.Builder.of(ModSignBlockEntity::new,
@@ -22,9 +20,6 @@ public class ModBlockEntities {
                             ModBlocks.EBONY_SIGN.get(),
                             ModBlocks.BLOOD_OAK_WALL_SIGN.get(),
                             ModBlocks.BLOOD_OAK_SIGN.get()).build(null));
-
-
-
 
 
     public static void register(IEventBus eventBus) {

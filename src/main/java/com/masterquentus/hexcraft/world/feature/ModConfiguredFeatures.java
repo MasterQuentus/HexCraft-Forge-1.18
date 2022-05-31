@@ -62,6 +62,6 @@ public class ModConfiguredFeatures {
     public static final List<OreConfiguration.TargetBlockState> OVERWORLD_PEARL_STONE = List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.PEARL_STONE.get().defaultBlockState()));
 
-    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> PEARL_STONE = FeatureUtils.register("pearl_stone",
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> PEARL_STONE_SPAWN = FeatureUtils.register("pearl_stone",
             Feature.ORE, new OreConfiguration(OVERWORLD_PEARL_STONE, 14));
 }

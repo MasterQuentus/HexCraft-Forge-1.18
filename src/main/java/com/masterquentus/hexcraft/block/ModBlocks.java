@@ -53,7 +53,7 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), ModCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject <Block> EMBER_MOSS_BLOCK = registerBlock("ember_moss_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)), ModCreativeModeTab.HEXCRAFT_TAB);
+            () -> new EmberMossBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)), ModCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject <Block> EMBER_MOSS_CARPET = registerBlock("ember_moss_carpet",
             () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)), ModCreativeModeTab.HEXCRAFT_TAB);

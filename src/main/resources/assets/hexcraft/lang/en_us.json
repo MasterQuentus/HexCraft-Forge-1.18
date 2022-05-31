@@ -84,7 +84,7 @@
   "block.hexcraft.ebony_leaves": "Ebony Leaves",
   "block.hexcraft.blood_oak_leaves": "Blood Oak Wood Leaves",
 
-  //plants
+  //Plants
   "block.hexcraft.bloody_rose": "Bloody Rose",
   "block.hexcraft.potted_bloody_rose": "Potted Bloody Rose",
   "item.hexcraft.witches_ladder": "Witches Ladder",
@@ -102,6 +102,11 @@
   "block.hexcraft.blood_oak_sign": "Blood Oak Sign",
   "item.hexcraft.blood_oak_sign": "Blood Oak Sign",
 
+  //Poppets
+  "item.hexcraft.poppet": "Poppet",
+  "item.hexcraft.death_protection_poppet": "Death Protection Poppet",
+  "item.hexcraft.fire_protection_poppet": "Fire Protection Poppet",
+  "item.hexcraft.water_protection_poppet": "Water Protection Poppet",
   //CreativeTab
    "itemGroup.hexcrafttab": "Hexcraft"
 }

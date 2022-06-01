@@ -52,6 +52,30 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), ModCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject<Block> CRIMSON_STONE = registerBlock("crimson_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), ModCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> CRIMSON_COBBLESTONE = registerBlock("crimson_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F)), ModCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> CRIMSON_STONE_BRICKS = registerBlock("crimson_stone_bricks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), ModCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> POLISHED_CRIMSON_STONE = registerBlock("polished_crimson_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), ModCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> CHISELED_CRIMSON_STONE = registerBlock("chiseled_crimson_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), ModCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> CRACKED_CRIMSON_STONE = registerBlock("cracked_crimson_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), ModCreativeModeTab.HEXCRAFT_TAB);
+
     public static final RegistryObject <Block> EMBER_MOSS_BLOCK = registerBlock("ember_moss_block",
             () -> new EmberMossBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)), ModCreativeModeTab.HEXCRAFT_TAB);
 

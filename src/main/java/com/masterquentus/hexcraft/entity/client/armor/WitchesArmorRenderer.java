@@ -8,14 +8,12 @@ public class WitchesArmorRenderer extends GeoArmorRenderer<WitchesArmorItem> {
     public WitchesArmorRenderer() {
         super(new WitchesArmorModel());
 
-        this.headBone = "armorHead";
-        this.bodyBone = "armorBody";
-        this.rightArmBone = "armorRightArm";
-        this.leftArmBone = "armorLeftArm";
-        this.rightLegBone = "armorLeftLeg";
-        this.leftLegBone = "armorRightLeg";
-        this.rightBootBone = "armorLeftBoot";
-        this.leftBootBone = "armorRightBoot";
+        this.headBone = "Head";
+        this.bodyBone = "Body";
+        this.rightArmBone = "RightArm";
+        this.leftArmBone = "LeftArm";
+        this.rightLegBone = "RightLeg";
+        this.leftLegBone = "LeftLeg";
 
     }
 }

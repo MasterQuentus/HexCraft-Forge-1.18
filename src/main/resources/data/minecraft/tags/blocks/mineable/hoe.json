@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
+  "hexcraft:ebony_leaves_pile",
+  "hexcraft:blood_oak_leaves_pile",
+  "hexcraft:ebony_leaves",
+  "hexcraft:blood_oak_leaves",
+  
 
   ]
 }

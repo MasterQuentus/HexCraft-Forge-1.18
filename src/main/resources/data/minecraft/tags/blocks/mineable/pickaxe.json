@@ -18,7 +18,13 @@
     "hexcraft:pearl_stone_wall",
     "hexcraft:pearl_cobblestone_wall",
     "hexcraft:pearl_stone_bricks_wall",
-    "hexcraft:polished_pearl_stone_wall"
+    "hexcraft:polished_pearl_stone_wall",
+	"hexcraft:crimson_stone",
+    "hexcraft:crimson_cobblestone",
+    "hexcraft:crimson_stone_bricks",
+    "hexcraft:polished_crimson_stone",
+    "hexcraft:chiseled_crimson_stone",
+    "hexcraft:cracked_crimson_stone"
 
   ]
 }

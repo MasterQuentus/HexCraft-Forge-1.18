@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "hexcraft:block/oak_planks"
+      "model": "hexcraft:block/blood_oak_planks"
     }
   }
 }

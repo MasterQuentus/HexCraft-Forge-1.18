@@ -2,6 +2,8 @@ package com.masterquentus.hexcraft.item;
 
 import com.masterquentus.hexcraft.HexCraft;
 import com.masterquentus.hexcraft.block.ModBlocks;
+import com.masterquentus.hexcraft.item.custom.WitchesArmorItem;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -19,11 +21,6 @@ public class ModItems {
     public static final RegistryObject<Item> WITCHES_LADDER_ITEM = ITEMS.register("witches_ladder_item",
             () -> new BlockItem(ModBlocks.WITCHES_LADDER.get(), new Item.Properties().tab(ModCreativeModeTab.HEXCRAFT_TAB)));
 
-    //public static final RegistryObject<Item> TAGLOCK_KIT  = ITEMS.register("taglock_kit",
-           // () -> new TaglockKit(new Item.Properties().tab(ModCreativeModeTab.HEXCRAFT_TAB)));
-
-    //public static final RegistryObject<Item> FILLED_TAGLOCK  = ITEMS.register("filled_taglock",
-            //() -> new Taglock(new Item.Properties().tab(ModCreativeModeTab.HEXCRAFT_TAB)));
 
     //Plants
     public static final RegistryObject<Item> MANDRAKE_SEEDS = ITEMS.register("mandrake_seeds",
@@ -53,6 +50,23 @@ public class ModItems {
 
     public static final RegistryObject<Item> WATER_PROTECTION_POPPET = ITEMS.register("water_protection_poppet",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.HEXCRAFT_TAB)));
+
+    //Armor
+    public static final RegistryObject<Item> WITCHES_HAT = ITEMS.register("witches_hat",
+            () -> new WitchesArmorItem(ModArmorMaterials.WITCH, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(ModCreativeModeTab.HEXCRAFT_TAB)));
+
+    public static final RegistryObject<Item> WITCHES_ROBES = ITEMS.register("witches_robes",
+            () -> new WitchesArmorItem(ModArmorMaterials.WITCH, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(ModCreativeModeTab.HEXCRAFT_TAB)));
+
+    public static final RegistryObject<Item> WITCHES_PANTS = ITEMS.register("witches_pants",
+            () -> new WitchesArmorItem(ModArmorMaterials.WITCH, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(ModCreativeModeTab.HEXCRAFT_TAB)));
+
+    public static final RegistryObject<Item> WITCHES_BOOTS = ITEMS.register("witches_boots",
+            () -> new WitchesArmorItem(ModArmorMaterials.WITCH, EquipmentSlot.FEET,
+                    new Item.Properties().tab(ModCreativeModeTab.HEXCRAFT_TAB)));
 
     //Brooms
     //public static final RegistryObject<Item> EBONY_BROOM = ITEMS.register("ebony_broom",

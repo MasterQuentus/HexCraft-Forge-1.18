@@ -2,6 +2,7 @@ package com.masterquentus.hexcraft;
 
 import com.masterquentus.hexcraft.block.entity.ModBlockEntities;
 import com.masterquentus.hexcraft.block.entity.ModWoodTypes;
+import com.masterquentus.hexcraft.common.HexcraftCompatibles;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -30,10 +31,9 @@ import org.slf4j.Logger;
 @Mod(HexCraft.MOD_ID)
 public class HexCraft {
     public static final String MOD_ID = "hexcraft";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
-    public HexCraft()
-    {
+    public HexCraft() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
@@ -57,6 +57,12 @@ public class HexCraft {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_OAK_SAPLING.get(), RenderType.cutout());
 
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_OAK_LEAVES.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_LEAVES_PILE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_OAK_LEAVES_PILE.get(), RenderType.cutout());
+
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOODY_ROSE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_BLOODY_ROSE.get(), RenderType.cutout());
 
@@ -78,12 +84,11 @@ public class HexCraft {
     }
 
 
-
     private void setup(final FMLCommonSetupEvent event) {
-       event.enqueueWork(() ->{
-           ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BLOODY_ROSE.getId(), ModBlocks.POTTED_BLOODY_ROSE);
-           Sheets.addWoodType(ModWoodTypes.EBONY);
-           Sheets.addWoodType(ModWoodTypes.Blood_Oak);
-       });
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BLOODY_ROSE.getId(), ModBlocks.POTTED_BLOODY_ROSE);
+            Sheets.addWoodType(ModWoodTypes.EBONY);
+            Sheets.addWoodType(ModWoodTypes.Blood_Oak);
+        });
     }
 }

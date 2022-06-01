@@ -222,6 +222,11 @@ public class ModBlocks {
                 }
             }, ModCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject <Block> EBONY_LEAVES_PILE = registerBlock("ebony_leaves_pile",
+            () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.1F)
+                    .sound(SoundType.GRASS).noDrops().noOcclusion()), ModCreativeModeTab.HEXCRAFT_TAB);
+
+
     public static final RegistryObject<Block> BLOOD_OAK_LEAVES = registerBlock("blood_oak_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
                 @Override
@@ -239,6 +244,10 @@ public class ModBlocks {
                     return 30;
                 }
             }, ModCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> BLOOD_OAK_LEAVES_PILE = registerBlock("blood_oak_leaves_pile",
+            () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.1F)
+                    .sound(SoundType.GRASS).noDrops().noOcclusion()), ModCreativeModeTab.HEXCRAFT_TAB);
 
     //Doors
     public static final RegistryObject<Block> EBONY_DOOR = registerBlock("ebony_door",
@@ -259,7 +268,7 @@ public class ModBlocks {
     //Pressure Plates
     public static final RegistryObject<Block> EBONY_PRESSURE_PLATE = registerBlock("ebony_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(0.5F)), ModCreativeModeTab.HEXCRAFT_TAB);
+                    .strength(0.5F).noDrops()), ModCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject<Block> BLOOD_OAK_PRESSURE_PLATE = registerBlock("blood_oak_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD)
@@ -332,6 +341,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> MANDRAKE_FLOWER = registerBlockWithoutBlockItem("mandrake_flower",
             () -> new MandrakePlantBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion()));
+
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutItem(String name, Supplier<T> block) {
       return  BLOCKS.register(name, block);

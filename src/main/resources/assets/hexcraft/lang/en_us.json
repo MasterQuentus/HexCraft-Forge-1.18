@@ -1,6 +1,13 @@
 {
   //Items
   "item.hexcraft.infused_fabric": "Infused Fabric",
+  "item.hexcraft.mandrake_seeds": "Mandrake Seeds",
+  "item.hexcraft.mandrake_root": "Mandrake Root",
+  "item.hexcraft.poppet": "Poppet",
+  "item.hexcraft.death_protection_poppet": "Death Protection Poppet",
+  "item.hexcraft.fire_protection_poppet": "Fire Protection Poppet",
+  "item.hexcraft.water_protection_poppet": "Water Protection Poppet",
+
 
   //Blocks
   "block.hexcraft.pearl_stone": "Pearlstone",
@@ -11,6 +18,8 @@
   "block.hexcraft.cracked_pearl_stone": "Cracked Pearlstone",
   "block.hexcraft.ember_moss_block": "Ember Moss",
   "block.hexcraft.ember_moss_carpet": "Ember Moss Carpet",
+  "block.hexcraft.ebony_sign": "Ebony Sign",
+  "block.hexcraft.blood_oak_sign": "Blood Oak Sign",
 
 
   //Stairs
@@ -60,6 +69,7 @@
   //Button
   "block.hexcraft.ebony_button": "Ebony Button",
   "block.hexcraft.blood_oak_button": "Blood Oak Button",
+
   //Doors
   "block.hexcraft.ebony_door": "Ebony Door",
   "block.hexcraft.blood_oak_door": "Blood Oak Door",
@@ -83,30 +93,22 @@
   //Leaves
   "block.hexcraft.ebony_leaves": "Ebony Leaves",
   "block.hexcraft.blood_oak_leaves": "Blood Oak Wood Leaves",
+  "block.hexcraft.ebony_leaves_pile": "Ebony Leaves",
+  "block.hexcraft.blood_oak_leaves_pile": "Blood Oak Wood Leaves",
 
-  //Plants
+  //plants
   "block.hexcraft.bloody_rose": "Bloody Rose",
   "block.hexcraft.potted_bloody_rose": "Potted Bloody Rose",
   "item.hexcraft.witches_ladder": "Witches Ladder",
   "block.hexcraft.witches_ladder": "Witches Ladder",
   "block.hexcraft.witches_ladder_plant": "Witches Ladder",
-  "item.hexcraft.mandrake_seeds": "Mandrake Seeds",
-  "item.hexcraft.mandrake_root": "Mandrake Root",
-  "block.hexcraft.mandrake_flower": "Mandrake Flower",
 
-  //Signs
-  "block.hexcraft.ebony_wall_sign": "Ebony Sign",
-  "block.hexcraft.ebony_sign": "Ebony Sign",
-  "item.hexcraft.ebony_sign": "Ebony Sign",
-  "block.hexcraft.blood_oak_wall_sign": "Blood Oak Sign",
-  "block.hexcraft.blood_oak_sign": "Blood Oak Sign",
-  "item.hexcraft.blood_oak_sign": "Blood Oak Sign",
+  //Armor
+  "item.hexcraft.witches_hat": "Witches Hat",
+  "item.hexcraft.witches_robes": "Witches Robes",
+  "item.hexcraft.witches_pants": "Witches Pants",
+  "item.hexcraft.witches_boots": "Witches Boots",
 
-  //Poppets
-  "item.hexcraft.poppet": "Poppet",
-  "item.hexcraft.death_protection_poppet": "Death Protection Poppet",
-  "item.hexcraft.fire_protection_poppet": "Fire Protection Poppet",
-  "item.hexcraft.water_protection_poppet": "Water Protection Poppet",
   //CreativeTab
    "itemGroup.hexcrafttab": "Hexcraft"
 }

@@ -23,10 +23,15 @@
   "block.hexcraft.chiseled_crimson_stone": "Chiseled Crimsonstone",
   "block.hexcraft.cracked_crimson_stone": "Cracked Crimsonstone",
   "block.hexcraft.ember_moss_block": "Ember Moss",
+  "block.hexcraft.living_kelp_block": "Living Kelp Block",
   "block.hexcraft.ember_moss_carpet": "Ember Moss Carpet",
   "block.hexcraft.ebony_sign": "Ebony Sign",
   "block.hexcraft.blood_oak_sign": "Blood Oak Sign",
 
+  //Fluids
+  "block.hexcraft.blood_flowing": "Blood",
+  "block.hexcraft.blood_fluid": "Blood",
+  "item.hexcraft.blood_bucket": "Blood Bucket",
 
   //Stairs
   "block.hexcraft.pearl_stone_stairs": "Pearlstone Stairs",
@@ -108,6 +113,8 @@
   "item.hexcraft.witches_ladder": "Witches Ladder",
   "block.hexcraft.witches_ladder": "Witches Ladder",
   "block.hexcraft.witches_ladder_plant": "Witches Ladder",
+  "block.hexcraft.living_kelp": "Living Kelp",
+  "block.hexcraft.living_kelp_plant": "Living Kelp",
 
   //Armor
   "item.hexcraft.witches_hat": "Witches Hat",

@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.Mod;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
 @Mod.EventBusSubscriber(modid = HexCraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-public class ModEventClientBusEvents {
+public class HexcraftEventClientBusEvents {
     @SubscribeEvent
     public static void registerArmorRenderers(final EntityRenderersEvent.AddLayers event) {
         GeoArmorRenderer.registerArmorRenderer(WitchesArmorItem.class, new WitchesArmorRenderer());

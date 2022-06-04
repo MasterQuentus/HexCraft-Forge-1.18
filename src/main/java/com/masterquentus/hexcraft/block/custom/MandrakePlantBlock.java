@@ -1,6 +1,6 @@
 package com.masterquentus.hexcraft.block.custom;
 
-import com.masterquentus.hexcraft.item.ModItems;
+import com.masterquentus.hexcraft.item.HexcraftItems;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -19,6 +19,6 @@ public class MandrakePlantBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItems.MANDRAKE_ROOT.get();
+        return HexcraftItems.MANDRAKE_ROOT.get();
     }
 }

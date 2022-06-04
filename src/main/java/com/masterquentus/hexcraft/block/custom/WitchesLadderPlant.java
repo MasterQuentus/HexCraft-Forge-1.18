@@ -1,6 +1,6 @@
 package com.masterquentus.hexcraft.block.custom;
 
-import com.masterquentus.hexcraft.block.ModBlocks;
+import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.LivingEntity;
@@ -23,6 +23,6 @@ public class WitchesLadderPlant extends GrowingPlantBodyBlock {
     }
 
     protected GrowingPlantHeadBlock getHeadBlock() {
-        return (GrowingPlantHeadBlock) ModBlocks.WITCHES_LADDER.get();
+        return (GrowingPlantHeadBlock) HexcraftBlocks.WITCHES_LADDER.get();
     }
 }

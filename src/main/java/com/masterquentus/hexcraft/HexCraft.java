@@ -1,25 +1,24 @@
 package com.masterquentus.hexcraft;
 
-import com.masterquentus.hexcraft.block.entity.ModBlockEntities;
-import com.masterquentus.hexcraft.block.entity.ModWoodTypes;
-import com.masterquentus.hexcraft.common.HexcraftCompatibles;
+import com.masterquentus.hexcraft.block.HexcraftBlocks;
+import com.masterquentus.hexcraft.block.entity.HexcraftBlockEntities;
+import com.masterquentus.hexcraft.block.entity.HexcraftWoodTypes;
+import com.masterquentus.hexcraft.common.HexcraftCompostables;
+import com.masterquentus.hexcraft.fluid.HexcraftFluids;
+import com.masterquentus.hexcraft.item.HexcraftItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraft.world.level.block.WeepingVinesBlock;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import com.masterquentus.hexcraft.item.ModItems;
-import com.masterquentus.hexcraft.block.ModBlocks;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -37,9 +36,11 @@ public class HexCraft {
     public HexCraft() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.register(eventBus);
-        ModBlocks.register(eventBus);
-        ModBlockEntities.register(eventBus);
+        HexcraftItems.register(eventBus);
+        HexcraftBlocks.register(eventBus);
+        HexcraftBlockEntities.register(eventBus);
+
+        HexcraftFluids.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
@@ -51,32 +52,39 @@ public class HexCraft {
 
 
     private void clientSetup(final FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_DOOR.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_TRAPDOOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_DOOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_TRAPDOOR.get(), RenderType.translucent());
 
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_OAK_DOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_OAK_TRAPDOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.BLOOD_OAK_DOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.BLOOD_OAK_TRAPDOOR.get(), RenderType.cutout());
 
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_SAPLING.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_OAK_SAPLING.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_SAPLING.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.BLOOD_OAK_SAPLING.get(), RenderType.cutout());
 
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_OAK_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.BLOOD_OAK_LEAVES.get(), RenderType.cutout());
 
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_LEAVES_PILE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_OAK_LEAVES_PILE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_LEAVES_PILE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.BLOOD_OAK_LEAVES_PILE.get(), RenderType.cutout());
 
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOODY_ROSE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_BLOODY_ROSE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.BLOODY_ROSE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.POTTED_BLOODY_ROSE.get(), RenderType.cutout());
 
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WITCHES_LADDER.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WITCHES_LADDER_PLANT.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WITCHES_LADDER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WITCHES_LADDER_PLANT.get(), RenderType.cutout());
 
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MANDRAKE_FLOWER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.LIVING_KELP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.LIVING_KELP_PLANT.get(), RenderType.cutout());
 
-        BlockEntityRenderers.register(ModBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
-        WoodType.register(ModWoodTypes.EBONY);
-        WoodType.register(ModWoodTypes.Blood_Oak);
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.MANDRAKE_FLOWER.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(HexcraftFluids.BLOOD_BLOCK.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftFluids.BLOOD_FLUID.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftFluids.BLOOD_FLOWING.get(), RenderType.translucent());
+
+        BlockEntityRenderers.register(HexcraftBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
+        WoodType.register(HexcraftWoodTypes.EBONY);
+        WoodType.register(HexcraftWoodTypes.Blood_Oak);
     }
 
     @SubscribeEvent
@@ -89,9 +97,14 @@ public class HexCraft {
 
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BLOODY_ROSE.getId(), ModBlocks.POTTED_BLOODY_ROSE);
-            Sheets.addWoodType(ModWoodTypes.EBONY);
-            Sheets.addWoodType(ModWoodTypes.Blood_Oak);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.BLOODY_ROSE.getId(), HexcraftBlocks.POTTED_BLOODY_ROSE);
+            Sheets.addWoodType(HexcraftWoodTypes.EBONY);
+            Sheets.addWoodType(HexcraftWoodTypes.Blood_Oak);
         });
+    }
+
+    public static void threadSafeLoadFinish() {
+        LOGGER.debug("BYG: \"Load Complete Event\" Starting...");
+        HexcraftCompostables.compostablesHex();
     }
 }

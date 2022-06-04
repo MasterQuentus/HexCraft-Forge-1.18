@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "minecraft:ebony_planks",
-    "minecraft:blood_oak_planks"
+    "hexcraft:ebony_planks",
+    "hexcraft:blood_oak_planks"
 
   ]
 }

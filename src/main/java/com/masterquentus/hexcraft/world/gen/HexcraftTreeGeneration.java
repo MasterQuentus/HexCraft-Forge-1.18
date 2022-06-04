@@ -1,6 +1,6 @@
 package com.masterquentus.hexcraft.world.gen;
 
-import com.masterquentus.hexcraft.world.feature.ModPlacedFeatures;
+import com.masterquentus.hexcraft.world.feature.HexcraftPlacedFeatures;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
@@ -13,16 +13,25 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 import java.util.List;
 import java.util.Set;
 
-public class ModFlowerGen {
-    public static void generateFlowers(final BiomeLoadingEvent event) {
+
+public class HexcraftTreeGeneration {
+    public static void generateTrees(final BiomeLoadingEvent event) {
         ResourceKey<Biome> key = ResourceKey.create(Registry.BIOME_REGISTRY, event.getName());
         Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
 
-        if(types.contains(BiomeDictionary.Type.PLAINS)) {
+        if (types.contains(BiomeDictionary.Type.PLAINS)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(ModPlacedFeatures.BLOODY_ROSE_PLACED);
+            base.add(HexcraftPlacedFeatures.EBONY_PLACED);
+
+        }
+
+        if (types.contains(BiomeDictionary.Type.PLAINS)) {
+            List<Holder<PlacedFeature>> base =
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
+
+            base.add(HexcraftPlacedFeatures.BLOOD_OAK_PLACED);
         }
     }
 }

@@ -1,6 +1,6 @@
 package com.masterquentus.hexcraft.block.custom;
 
-import com.masterquentus.hexcraft.block.ModBlocks;
+import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.player.Player;
@@ -13,8 +13,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.ToolAction;
 import org.jetbrains.annotations.Nullable;
 
-public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
-public ModFlammableRotatedPillarBlock(Properties properties) {
+public class HexcraftFlammableRotatedPillarBlock extends RotatedPillarBlock {
+public HexcraftFlammableRotatedPillarBlock(Properties properties) {
 
     super(properties);
 }
@@ -39,19 +39,19 @@ public ModFlammableRotatedPillarBlock(Properties properties) {
     public BlockState getToolModifiedState(BlockState state, Level world, BlockPos pos, Player player,
                                            ItemStack stack, ToolAction toolAction) {
         if(stack.getItem() instanceof AxeItem) {
-            if(state.is(ModBlocks.EBONY_LOG.get())) {
-                return ModBlocks.STRIPPED_EBONY_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            if(state.is(HexcraftBlocks.EBONY_LOG.get())) {
+                return HexcraftBlocks.STRIPPED_EBONY_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
-            if(state.is(ModBlocks.EBONY_WOOD.get())) {
-                return ModBlocks.STRIPPED_EBONY_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-            }
-
-            if(state.is(ModBlocks.BLOOD_OAK_LOG.get())) {
-                return ModBlocks.STRIPPED_BLOOD_OAK_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            if(state.is(HexcraftBlocks.EBONY_WOOD.get())) {
+                return HexcraftBlocks.STRIPPED_EBONY_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
 
-            if(state.is(ModBlocks.BLOOD_OAK_WOOD.get())) {
-                return ModBlocks.STRIPPED_BLOOD_OAK_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            if(state.is(HexcraftBlocks.BLOOD_OAK_LOG.get())) {
+                return HexcraftBlocks.STRIPPED_BLOOD_OAK_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+
+            if(state.is(HexcraftBlocks.BLOOD_OAK_WOOD.get())) {
+                return HexcraftBlocks.STRIPPED_BLOOD_OAK_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
 
         }

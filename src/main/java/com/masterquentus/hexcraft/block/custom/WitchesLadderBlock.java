@@ -1,6 +1,6 @@
 package com.masterquentus.hexcraft.block.custom;
 
-import com.masterquentus.hexcraft.block.ModBlocks;
+import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.LivingEntity;
@@ -32,7 +32,7 @@ public class WitchesLadderBlock extends GrowingPlantHeadBlock implements Bonemea
     }
 
     protected Block getBodyBlock() {
-        return ModBlocks.WITCHES_LADDER_PLANT.get();
+        return HexcraftBlocks.WITCHES_LADDER_PLANT.get();
     }
 
     protected boolean canGrowInto(BlockState p_154971_) {

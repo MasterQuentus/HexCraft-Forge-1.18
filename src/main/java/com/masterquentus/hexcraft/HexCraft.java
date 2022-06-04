@@ -105,6 +105,6 @@ public class HexCraft {
 
     public static void threadSafeLoadFinish() {
         LOGGER.debug("BYG: \"Load Complete Event\" Starting...");
-        HexcraftCompostables.compostablesHex();
+        HexcraftCompostables.compostableHex();
     }
 }

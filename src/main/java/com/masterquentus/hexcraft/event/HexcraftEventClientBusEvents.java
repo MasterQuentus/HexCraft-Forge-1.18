@@ -1,7 +1,7 @@
 package com.masterquentus.hexcraft.event;
 
 import com.masterquentus.hexcraft.HexCraft;
-import com.masterquentus.hexcraft.entity.client.armor.WitchesArmorRenderer;
+import com.masterquentus.hexcraft.block.entity.client.armor.WitchesArmorRenderer;
 import com.masterquentus.hexcraft.item.custom.WitchesArmorItem;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;

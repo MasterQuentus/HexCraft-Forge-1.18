@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/inner_stairs",
   "textures": {
-    "bottom": "hexcraft:block/pearl_cobblestone",
-    "top": "hexcraft:block/pearl_cobblestone",
-    "side": "hexcraft:block/pearl_cobblestone"
+    "bottom": "hexcraft:block/pearl_stone_bricks",
+    "top": "hexcraft:block/pearl_stone_bricks",
+    "side": "hexcraft:block/pearl_stone_bricks"
   }
 }

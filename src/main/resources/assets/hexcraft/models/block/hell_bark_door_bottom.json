@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom",
+  "textures": {
+    "top": "hexcraft:block/hell_bark_door_top",
+    "bottom": "hexcraft:block/hell_bark_door_bottom"
+  }
+}

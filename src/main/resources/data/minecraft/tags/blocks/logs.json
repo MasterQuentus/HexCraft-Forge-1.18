@@ -4,7 +4,9 @@
     "hexcraft:ebony_log",
     "hexcraft:ebony_wood",
     "hexcraft:blood_oak_log",
-    "hexcraft:blood_oak_wood"
+    "hexcraft:blood_oak_wood",
+	"hexcraft:hell_bark_log",
+    "hexcraft:hell_bark_wood"
 
   ]
 }

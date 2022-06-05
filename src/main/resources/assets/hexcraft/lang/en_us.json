@@ -1,12 +1,15 @@
 {
   //Items
   "item.hexcraft.infused_fabric": "Infused Fabric",
+  "item.hexcraft.blood_bottle": "Blood Bottle",
   "item.hexcraft.mandrake_seeds": "Mandrake Seeds",
   "item.hexcraft.mandrake_root": "Mandrake Root",
   "item.hexcraft.poppet": "Poppet",
   "item.hexcraft.death_protection_poppet": "Death Protection Poppet",
   "item.hexcraft.fire_protection_poppet": "Fire Protection Poppet",
   "item.hexcraft.water_protection_poppet": "Water Protection Poppet",
+  "item.hexcraft.lilith_spawn_egg": "Lilith Spawn Egg",
+  "item.hexcraft.wendigo_spawn_egg": "Wendigo Spawn Egg",
 
 
   //Blocks
@@ -22,11 +25,18 @@
   "block.hexcraft.polished_crimson_stone": "Polished Crimsonstone",
   "block.hexcraft.chiseled_crimson_stone": "Chiseled Crimsonstone",
   "block.hexcraft.cracked_crimson_stone": "Cracked Crimsonstone",
+  "block.hexcraft.under_world_stone": "Underworld Stone",
+  "block.hexcraft.under_world_cobblestone": "Underworld Cobblestone",
+  "block.hexcraft.under_world_stone_bricks": "Underworld Stone Bricks",
+  "block.hexcraft.polished_under_world_stone": "Polished Underworld Stone",
+  "block.hexcraft.chiseled_under_world_stone": "Chiseled Underworld Stone",
+  "block.hexcraft.cracked_under_world_stone": "Cracked Underworld Stone",
   "block.hexcraft.ember_moss_block": "Ember Moss",
   "block.hexcraft.living_kelp_block": "Living Kelp Block",
   "block.hexcraft.ember_moss_carpet": "Ember Moss Carpet",
   "block.hexcraft.ebony_sign": "Ebony Sign",
   "block.hexcraft.blood_oak_sign": "Blood Oak Sign",
+  "block.hexcraft.hell_bark_sign": "Hellbark Sign",
 
   //Fluids
   "block.hexcraft.blood_flowing": "Blood",
@@ -38,22 +48,48 @@
   "block.hexcraft.pearl_cobblestone_stairs": "Pearl Cobblestone Stairs",
   "block.hexcraft.pearl_stone_bricks_stairs": "Pearlstone Brick Stairs",
   "block.hexcraft.polished_pearl_stone_stairs": "Polished Pearlstone Stairs",
+  "block.hexcraft.crimson_stone_stairs": "Crimsonstone Stairs",
+  "block.hexcraft.crimson_cobblestone_stairs": "Crimson Cobblestone Stairs",
+  "block.hexcraft.crimson_stone_bricks_stairs": "Crimson Brick Stairs",
+  "block.hexcraft.polished_crimson_stone_stairs": "Polished Crimson Stairs",
+  "block.hexcraft.under_world_stone_stairs": "Underworld Stone Stairs",
+  "block.hexcraft.under_world_cobblestone_stairs": "Underworld Cobblestone Stairs",
+  "block.hexcraft.under_world_stone_bricks_stairs": "Underworld Brick Stairs",
+  "block.hexcraft.polished_under_world_stone_stairs": "Polished Underworld Stairs",
   "block.hexcraft.blood_oak_stairs": "Blood Oak Stairs",
   "block.hexcraft.ebony_stairs": "Ebony Stairs",
+  "block.hexcraft.hell_bark_stairs": "Hellbark Stairs",
 
   //Slabs
   "block.hexcraft.pearl_stone_slab": "Pearlstone Slab",
   "block.hexcraft.pearl_cobblestone_slab": "Pearl Cobblestone Slab",
   "block.hexcraft.pearl_stone_bricks_slab": "Pearlstone Brick Slab",
   "block.hexcraft.polished_pearl_stone_slab": "Polished Pearlstone Slab",
+  "block.hexcraft.crimson_stone_slab": "Crimsonstone Slab",
+  "block.hexcraft.crimson_cobblestone_slab": "Crimson Cobblestone Slab",
+  "block.hexcraft.crimson_stone_bricks_slab": "Crimsonstone Brick Slab",
+  "block.hexcraft.polished_crimson_stone_slab": "Polished Crimsonstone Slab",
+  "block.hexcraft.under_world_stone_slab": "Underworld Stone Slab",
+  "block.hexcraft.under_world_cobblestone_slab": "Underworld Cobblestone Slab",
+  "block.hexcraft.under_world_stone_bricks_slab": "Underworld Stone Brick Slab",
+  "block.hexcraft.polished_under_world_stone_slab": "Polished Underworld Stone Slab",
   "block.hexcraft.ebony_slab": "Ebony Slab",
   "block.hexcraft.blood_oak_slab": "Blood Oak Slab",
+  "block.hexcraft.hell_bark_slab": "Hellbark Slab",
 
   //Walls
   "block.hexcraft.pearl_stone_wall": "Pearlstone Wall",
   "block.hexcraft.pearl_cobblestone_wall": "Pearl Cobblestone Wall",
   "block.hexcraft.pearl_stone_bricks_wall": "Pearlstone Brick Wall",
   "block.hexcraft.polished_pearl_stone_wall": "Polished Pearlstone Wall",
+  "block.hexcraft.crimson_stone_wall": "Crimsonstone Wall",
+  "block.hexcraft.crimson_cobblestone_wall": "Crimson Cobblestone Wall",
+  "block.hexcraft.crimson_stone_bricks_wall": "Crimsonstone Brick Wall",
+  "block.hexcraft.polished_crimson_stone_wall": "Polished Crimsonstone Wall",
+  "block.hexcraft.under_world_stone_wall": "Underworld Stone Wall",
+  "block.hexcraft.under_world_cobblestone_wall": "Underworld Cobblestone Wall",
+  "block.hexcraft.under_world_stone_bricks_wall": "Underworld Brick Wall",
+  "block.hexcraft.polished_under_world_stone_wall": "Polished Underworld Wall",
 
   //Logs
   "block.hexcraft.stripped_ebony_wood": "Stripped Ebony Wood",
@@ -64,50 +100,68 @@
   "block.hexcraft.stripped_blood_oak_log": "Stripped Blood Oak Log",
   "block.hexcraft.blood_oak_wood": "Blood Oak Wood",
   "block.hexcraft.blood_oak_log": "Blood Oak Log",
+  "block.hexcraft.stripped_hell_bark_wood": "Stripped Hellbark Wood",
+  "block.hexcraft.stripped_hell_bark_log": "Stripped Hellbark Log",
+  "block.hexcraft.hell_bark_wood": "Hellbark Wood",
+  "block.hexcraft.hell_bark_log": "Hellbark Log",
 
   //Planks
   "block.hexcraft.ebony_planks": "Ebony Planks",
   "block.hexcraft.blood_oak_planks": "Blood Oak Planks",
+  "block.hexcraft.hell_bark_planks": "Hellbark Planks",
 
   //Pressure Plates
   "block.hexcraft.ebony_pressure_plate": "Ebony Pressure Plate",
   "block.hexcraft.blood_oak_pressure_plate": "Blood Oak Pressure Plate",
+  "block.hexcraft.hell_bark_pressure_plate": "Hellbark Pressure Plate",
 
   //Saplings
   "block.hexcraft.ebony_sapling": "Ebony Sapling",
   "block.hexcraft.blood_oak_sapling": "Blood Oak Sapling",
+  "block.hexcraft.hell_bark_sapling": "Hellbark Sapling",
 
   //Button
+  "block.hexcraft.pearl_stone_button": "Pearlstone Button",
+  "block.hexcraft.crimson_stone_button": "Crimsonstone Button",
+  "block.hexcraft.under_world_stone_button": "Underworld Stone Button",
   "block.hexcraft.ebony_button": "Ebony Button",
   "block.hexcraft.blood_oak_button": "Blood Oak Button",
+  "block.hexcraft.hell_bark_button": "Hellbark Button",
 
   //Doors
   "block.hexcraft.ebony_door": "Ebony Door",
   "block.hexcraft.blood_oak_door": "Blood Oak Door",
+  "block.hexcraft.hell_bark_door": "Hellbark Door",
 
   //Trapdoors
   "block.hexcraft.ebony_trapdoor": "Ebony Trapdoor",
   "block.hexcraft.blood_oak_trapdoor": "Blood Oak Trapdoor",
+  "block.hexcraft.hell_bark_trapdoor": "Hellbark Trapdoor",
 
   //Bookshelfs
   "block.hexcraft.ebony_bookshelf": "Ebony Bookshelf",
   "block.hexcraft.blood_oak_bookshelf": "Blood Oak Bookshelf",
+  "block.hexcraft.hell_bark_bookshelf": "Hellbark Bookshelf",
 
   //Fence
   "block.hexcraft.ebony_fence": "Ebony Fence",
   "block.hexcraft.blood_oak_fence": "Blood Oak Fence",
+  "block.hexcraft.hell_bark_fence": "Hellbark Fence",
 
   //Fence Gate
   "block.hexcraft.ebony_fence_gate": "Ebony Fence Gate",
   "block.hexcraft.blood_oak_fence_gate": "Blood Oak Fence Gate",
+  "block.hexcraft.hell_bark_fence_gate": "Hellbark Fence Gate",
 
   //Leaves
   "block.hexcraft.ebony_leaves": "Ebony Leaves",
   "block.hexcraft.blood_oak_leaves": "Blood Oak Wood Leaves",
+  "block.hexcraft.hell_bark_leaves": "Hellbark Leaves",
   "block.hexcraft.ebony_leaves_pile": "Ebony Leaves",
   "block.hexcraft.blood_oak_leaves_pile": "Blood Oak Wood Leaves",
+  "block.hexcraft.hell_bark_leaves_pile": "Hellbark Leaves",
 
-  //plants
+  //Plants
   "block.hexcraft.bloody_rose": "Bloody Rose",
   "block.hexcraft.potted_bloody_rose": "Potted Bloody Rose",
   "item.hexcraft.witches_ladder": "Witches Ladder",
@@ -115,6 +169,9 @@
   "block.hexcraft.witches_ladder_plant": "Witches Ladder",
   "block.hexcraft.living_kelp": "Living Kelp",
   "block.hexcraft.living_kelp_plant": "Living Kelp",
+  "block.hexcraft.blood_mushroom": "Blood Mushroom",
+  "block.hexcraft.blood_mushroom_block": "Blood Mushroom Block",
+  "block.hexcraft.blood_mushroom_stem": "Blood Mushroom Stem",
 
   //Armor
   "item.hexcraft.witches_hat": "Witches Hat",

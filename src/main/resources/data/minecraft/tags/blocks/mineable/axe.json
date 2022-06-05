@@ -17,6 +17,7 @@
   "hexcraft:ebony_bookshelf",
   "hexcraft:ebony_sign",
   "hexcraft:ebony_wall_sign",
+  "hexcraft:ebony_button",
   "hexcraft:blood_oak_log",
   "hexcraft:blood_oak_wood",
   "hexcraft:stripped_blood_oak_log",
@@ -31,9 +32,26 @@
   "hexcraft:blood_oak_fence",
   "hexcraft:blood_oak_fence_gate",
   "hexcraft:blood_oak_bookshelf",
-  "hexcraft:ebony_sign",
   "hexcraft:blood_oak_sign",
-  "hexcraft:blood_oak_wall_sign"
+  "hexcraft:blood_oak_wall_sign",
+  "hexcraft:blood_oak_button",
+  "hexcraft:hell_bark_log",
+  "hexcraft:hell_bark_wood",
+  "hexcraft:stripped_hell_bark_log",
+  "hexcraft:stripped_hell_bark_wood",
+  "hexcraft:hell_bark_planks",
+  "hexcraft:hell_bark_stairs",
+  "hexcraft:hell_bark_slab",
+  "hexcraft:hell_bark_door",
+  "hexcraft:hell_bark_trapdoor",
+  "hexcraft:hell_bark_pressure_plate",
+  "hexcraft:hell_bark_button",
+  "hexcraft:hell_bark_fence",
+  "hexcraft:hell_bark_fence_gate",
+  "hexcraft:hell_bark_bookshelf",
+  "hexcraft:hell_bark_sign",
+  "hexcraft:hell_bark_wall_sign",
+  "hexcraft:hell_bark_button"
 
   ]
 }

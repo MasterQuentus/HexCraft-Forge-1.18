@@ -2,9 +2,12 @@ package com.masterquentus.hexcraft.item;
 
 import com.masterquentus.hexcraft.HexCraft;
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
+import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
 import com.masterquentus.hexcraft.fluid.HexcraftFluids;
+import com.masterquentus.hexcraft.item.custom.BloodBottleItem;
 import com.masterquentus.hexcraft.item.custom.WitchesArmorItem;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -19,14 +22,26 @@ public class HexcraftItems {
     public static final RegistryObject<Item> INFUSED_FABRIC = ITEMS.register("infused_fabric",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
+    public static final RegistryObject<Item> BLOOD_BOTTLE = ITEMS.register("blood_bottle",
+            () -> new BloodBottleItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16)));
+
+    //Spawn Eggs
+    public static final RegistryObject<Item> LILITH_SPAWN_EGG = ITEMS.register("lilith_spawn_egg",
+            () -> new ForgeSpawnEggItem(HexcraftEntityTypes.LILITH,0x770000, 0x735C30,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
+    public static final RegistryObject<Item> WENDIGO_SPAWN_EGG = ITEMS.register("wendigo_spawn_egg",
+            () -> new ForgeSpawnEggItem(HexcraftEntityTypes.WENDIGO,0x643B00, 0xFFFFFF,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
+
+    //Plants
     public static final RegistryObject<Item> WITCHES_LADDER_ITEM = ITEMS.register("witches_ladder_item",
             () -> new BlockItem(HexcraftBlocks.WITCHES_LADDER.get(), new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
     public static final RegistryObject<Item> LIVING_KELP_ITEM = ITEMS.register("living_kelp_item",
             () -> new BlockItem(HexcraftBlocks.LIVING_KELP.get(), new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
-
-    //Plants
     public static final RegistryObject<Item> MANDRAKE_SEEDS = ITEMS.register("mandrake_seeds",
             () -> new ItemNameBlockItem(HexcraftBlocks.MANDRAKE_FLOWER.get(),
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
@@ -42,6 +57,10 @@ public class HexcraftItems {
     public static final RegistryObject<Item> BLOOD_OAK_SIGN = ITEMS.register("blood_oak_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.BLOOD_OAK_SIGN.get(), HexcraftBlocks.BLOOD_OAK_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> HELL_BARK_SIGN = ITEMS.register("hell_bark_sign",
+            () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
+                    HexcraftBlocks.HELL_BARK_SIGN.get(), HexcraftBlocks.HELL_BARK_WALL_SIGN.get()));
     //Poppets
     public static final RegistryObject<Item> POPPET = ITEMS.register("poppet",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));

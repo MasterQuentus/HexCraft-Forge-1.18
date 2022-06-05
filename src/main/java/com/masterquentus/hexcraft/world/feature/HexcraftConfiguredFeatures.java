@@ -36,6 +36,14 @@ public class HexcraftConfiguredFeatures {
                     new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 4),
                     new TwoLayersFeatureSize(3, 0, 3)).build());
 
+    public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> HELL_BARK_TREE =
+            FeatureUtils.register("hell_bark", Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                    BlockStateProvider.simple(HexcraftBlocks.HELL_BARK_LOG.get()),
+                    new StraightTrunkPlacer(4, 6, 3),
+                    BlockStateProvider.simple(HexcraftBlocks.HELL_BARK_LEAVES.get()),
+                    new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 4),
+                    new TwoLayersFeatureSize(3, 0, 3)).build());
+
     public static final Holder<PlacedFeature> EBONY_CHECKED =
             PlacementUtils.register("ebony_checked", EBONY_TREE,
                     PlacementUtils.filteredByBlockSurvival(HexcraftBlocks.EBONY_SAPLING.get()));
@@ -43,6 +51,10 @@ public class HexcraftConfiguredFeatures {
     public static final Holder<PlacedFeature> BLOOD_OAK_CHECKED =
             PlacementUtils.register("blood_oak_checked", BLOOD_OAK_TREE,
                     PlacementUtils.filteredByBlockSurvival(HexcraftBlocks.BLOOD_OAK_SAPLING.get()));
+
+    public static final Holder<PlacedFeature> HELL_BARK_CHECKED =
+            PlacementUtils.register("blood_oak_checked", HELL_BARK_TREE,
+                    PlacementUtils.filteredByBlockSurvival(HexcraftBlocks.HELL_BARK_SAPLING.get()));
 
     public static final Holder<ConfiguredFeature<RandomFeatureConfiguration, ?>> EBONY_SPAWN =
             FeatureUtils.register("ebony_spawn", Feature.RANDOM_SELECTOR,
@@ -53,6 +65,11 @@ public class HexcraftConfiguredFeatures {
             FeatureUtils.register("blood_oak_spawn", Feature.RANDOM_SELECTOR,
                     new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(BLOOD_OAK_CHECKED,
                             0.5F)), BLOOD_OAK_CHECKED));
+
+    public static final Holder<ConfiguredFeature<RandomFeatureConfiguration, ?>> HELL_BARK_SPAWN =
+            FeatureUtils.register("hell_bark_spawn", Feature.RANDOM_SELECTOR,
+                    new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(HELL_BARK_CHECKED,
+                            0.5F)), HELL_BARK_CHECKED));
 
     public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> BLOODY_ROSE =
             FeatureUtils.register("flower_bloody_rose", Feature.FLOWER,

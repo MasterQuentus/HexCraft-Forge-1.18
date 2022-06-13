@@ -57,7 +57,14 @@
     "hexcraft:under_world_cobblestone_wall",
     "hexcraft:under_world_stone_bricks_wall",
     "hexcraft:polished_under_world_stone_wall",
-	"hexcraft:under_world_stone_button"
+	"hexcraft:under_world_stone_button",
+	"hexcraft:magic_crystal_block",
+	"hexcraft:budding_magic_crystal",
+	"hexcraft:magic_crystal_cluster",
+	"hexcraft:large_magic_crystal_bud",
+	"hexcraft:medium_magic_crystal_bud",
+	"hexcraft:small_magic_crystal_bud",
+	"hexcraft:black_obsidian"
 
   ]
 }

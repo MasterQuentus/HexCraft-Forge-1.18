@@ -8,6 +8,9 @@ import com.masterquentus.hexcraft.block.entity.client.WendigoRenderer;
 import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
 import com.masterquentus.hexcraft.fluid.HexcraftFluids;
 import com.masterquentus.hexcraft.item.HexcraftItems;
+import com.masterquentus.hexcraft.sound.HexcraftSounds;
+import com.masterquentus.hexcraft.villager.HexcraftPOIs;
+import com.masterquentus.hexcraft.world.dimension.UnderworldDimension;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -15,11 +18,13 @@ import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.properties.WoodType;
-import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -42,11 +47,18 @@ public class HexCraft {
 
         HexcraftItems.register(eventBus);
         HexcraftBlocks.register(eventBus);
+
+        HexcraftSounds.register(eventBus);
+
         HexcraftBlockEntities.register(eventBus);
 
         HexcraftFluids.register(eventBus);
 
         HexcraftEntityTypes.register(eventBus);
+
+        UnderworldDimension.register();
+
+        HexcraftPOIs.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
@@ -91,6 +103,19 @@ public class HexCraft {
         ItemBlockRenderTypes.setRenderLayer(HexcraftFluids.BLOOD_FLUID.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(HexcraftFluids.BLOOD_FLOWING.get(), RenderType.translucent());
 
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_LEAVES_PILE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.BLOOD_OAK_LEAVES_PILE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.HELL_BARK_LEAVES_PILE.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.MAGIC_CRYSTAL_CLUSTER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.SMALL_MAGIC_CRYSTAL_BUD.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.MEDIUM_MAGIC_CRYSTAL_BUD.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.LARGE_MAGIC_CRYSTAL_BUD.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.UNDERWORLD_PORTAL.get(), RenderType.translucent());
+
+
+
         BlockEntityRenderers.register(HexcraftBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
         WoodType.register(HexcraftWoodTypes.EBONY);
         WoodType.register(HexcraftWoodTypes.BLOOD_OAK);
@@ -114,6 +139,11 @@ public class HexCraft {
             Sheets.addWoodType(HexcraftWoodTypes.EBONY);
             Sheets.addWoodType(HexcraftWoodTypes.BLOOD_OAK);
             Sheets.addWoodType(HexcraftWoodTypes.HELL_BARK);
+
+            SpawnPlacements.register(HexcraftEntityTypes.WENDIGO.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Monster::checkAnyLightMonsterSpawnRules);
         });
     }
 }

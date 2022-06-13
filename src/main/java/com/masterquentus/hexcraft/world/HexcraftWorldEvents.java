@@ -1,6 +1,7 @@
 package com.masterquentus.hexcraft.world;
 
 import com.masterquentus.hexcraft.HexCraft;
+import com.masterquentus.hexcraft.world.gen.HexcraftEntityGeneration;
 import com.masterquentus.hexcraft.world.gen.HexcraftFlowerGen;
 import com.masterquentus.hexcraft.world.gen.HexcraftOreGen;
 import com.masterquentus.hexcraft.world.gen.HexcraftTreeGeneration;
@@ -16,5 +17,7 @@ public class HexcraftWorldEvents {
 
         HexcraftTreeGeneration.generateTrees(event);
         HexcraftFlowerGen.generateFlowers(event);
+
+        HexcraftEntityGeneration.onEntitySpawn(event);
     }
 }

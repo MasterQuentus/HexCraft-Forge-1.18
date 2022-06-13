@@ -13,7 +13,7 @@ public class WendigoModel extends AnimatedGeoModel<WendigoEntity> {
 
     @Override
     public ResourceLocation getTextureLocation(WendigoEntity object) {
-        return new ResourceLocation(HexCraft.MOD_ID, "textures/entity/lilith/wendigo.png");
+        return new ResourceLocation(HexCraft.MOD_ID, "textures/entity/wendigo/wendigo.png");
     }
 
     @Override

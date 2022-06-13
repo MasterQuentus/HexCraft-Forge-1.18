@@ -101,11 +101,43 @@ public class HexcraftBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject <Block> BLACK_OBSIDIAN = registerBlock("black_obsidian",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(50.0F, 1200.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     public static final RegistryObject <Block> EMBER_MOSS_BLOCK = registerBlock("ember_moss_block",
             () -> new EmberMossBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject <Block> EMBER_MOSS_CARPET = registerBlock("ember_moss_carpet",
             () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> MAGIC_CRYSTAL_BLOCK = registerBlock("magic_crystal_block",
+            () -> new MagicalCrystalBlock(BlockBehaviour.Properties.of(Material.AMETHYST).strength(1.5F).requiresCorrectToolForDrops()
+                    .sound(SoundType.AMETHYST)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> BUDDING_MAGIC_CRYSTAL = registerBlock("budding_magic_crystal",
+            () -> new BuddingMagicalCrystalBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(1.5F).requiresCorrectToolForDrops()
+                    .sound(SoundType.AMETHYST)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> MAGIC_CRYSTAL_CLUSTER = registerBlock("magic_crystal_cluster",
+            () -> new MagicCrystalClusterBlock(7, 3, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion()
+                    .randomTicks().strength(1.5F).requiresCorrectToolForDrops()
+                    .sound(SoundType.AMETHYST).lightLevel((state) -> 5)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> LARGE_MAGIC_CRYSTAL_BUD = registerBlock("large_magic_crystal_bud",
+            () -> new MagicCrystalClusterBlock(7, 3, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion()
+                    .randomTicks().strength(1.5F).requiresCorrectToolForDrops()
+                    .sound(SoundType.AMETHYST).lightLevel((state) -> 4)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> MEDIUM_MAGIC_CRYSTAL_BUD = registerBlock("medium_magic_crystal_bud",
+            () -> new MagicCrystalClusterBlock(7, 3, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion()
+                    .randomTicks().strength(1.5F).requiresCorrectToolForDrops()
+                    .sound(SoundType.AMETHYST).lightLevel((state) -> 2)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> SMALL_MAGIC_CRYSTAL_BUD = registerBlock("small_magic_crystal_bud",
+            () -> new MagicCrystalClusterBlock(7, 3, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion()
+                    .randomTicks().strength(1.5F).requiresCorrectToolForDrops()
+                    .sound(SoundType.AMETHYST).lightLevel((state) -> 1)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //Stairs
     public static final RegistryObject<Block> PEARL_STONE_STAIRS = registerBlock("pearl_stone_stairs",
@@ -575,6 +607,10 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> HELL_BARK_SIGN = registerBlockWithoutBlockItem("hell_bark_sign",
             () -> new HexcraftStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), HexcraftWoodTypes.HELL_BARK));
 
+    //Portal Blocks
+    public static final RegistryObject<Block> UNDERWORLD_PORTAL = registerBlockWithoutBlockItem("underworld_portal",
+            UnderworldPortalBlock::new);
+
     //Bookshelves
     public static final RegistryObject<Block> EBONY_BOOKSHELF = registerBlock("ebony_bookshelf",
             () -> new HexcraftBookshelf(BlockBehaviour.Properties.of(Material.WOOD)
@@ -608,11 +644,13 @@ public class HexcraftBlocks {
 
     public static final RegistryObject<Block> LIVING_KELP = BLOCKS.register("living_kelp",
             () -> new LivingKelpBlock(BlockBehaviour.Properties.copy(Blocks.KELP)
-                    .noCollission().randomTicks().instabreak().sound(SoundType.WET_GRASS)));
+                    .noCollission().randomTicks().instabreak().sound(SoundType.WET_GRASS)
+                    .lightLevel((state) -> 15)));
 
     public static final RegistryObject<Block> LIVING_KELP_PLANT = BLOCKS.register("living_kelp_plant",
             () -> new LivingkelpPlant(BlockBehaviour.Properties.copy(Blocks.KELP_PLANT)
-                    .instabreak().noOcclusion()));
+                    .instabreak().lightLevel((state) -> 15).noOcclusion()));
+
 
     public static final RegistryObject<Block> LIVING_KELP_BLOCK = registerBlock("living_kelp_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.WATER_PLANT).sound(SoundType.GRASS)

@@ -1,5 +1,6 @@
 package com.masterquentus.hexcraft.entity.custom;
 
+import com.masterquentus.hexcraft.sound.HexcraftSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -15,6 +16,7 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.npc.AbstractVillager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -76,22 +78,25 @@ public class WendigoEntity extends Monster implements IAnimatable {
         return this.factory;
     }
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
-        this.playSound(SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, 0.15F, 1.0F);
+        this.playSound(SoundEvents.AMETHYST_BLOCK_BREAK, 0.15F, 1.0F);
     }
 
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.WOLF_AMBIENT;
+        return HexcraftSounds.WENDIGO_AMBIENT.get();
     }
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return SoundEvents.WOLF_HURT;
+        return HexcraftSounds.WENDIGO_HURT.get();
     }
 
     protected SoundEvent getDeathSound() {
-        return SoundEvents.WOLF_DEATH;
+        return HexcraftSounds.WENDIGO_DEATH.get();
     }
 
     protected float getSoundVolume() {
         return 0.2F;
     }
 }
+
+
+

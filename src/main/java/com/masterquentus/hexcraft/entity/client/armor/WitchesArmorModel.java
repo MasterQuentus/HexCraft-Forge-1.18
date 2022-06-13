@@ -1,4 +1,4 @@
-package com.masterquentus.hexcraft.block.entity.client.armor;
+package com.masterquentus.hexcraft.entity.client.armor;
 
 import com.masterquentus.hexcraft.HexCraft;
 import com.masterquentus.hexcraft.item.custom.WitchesArmorItem;

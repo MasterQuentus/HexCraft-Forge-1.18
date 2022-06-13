@@ -19,7 +19,9 @@ public class HexcraftBlockEntities {
                             HexcraftBlocks.EBONY_WALL_SIGN.get(),
                             HexcraftBlocks.EBONY_SIGN.get(),
                             HexcraftBlocks.BLOOD_OAK_WALL_SIGN.get(),
-                            HexcraftBlocks.BLOOD_OAK_SIGN.get()).build(null));
+                            HexcraftBlocks.BLOOD_OAK_SIGN.get(),
+                            HexcraftBlocks.HELL_BARK_SIGN.get(),
+                            HexcraftBlocks.HELL_BARK_WALL_SIGN.get()).build(null));
 
 
     public static void register(IEventBus eventBus) {

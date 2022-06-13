@@ -1,4 +1,4 @@
-package com.masterquentus.hexcraft.block.entity.client.armor;
+package com.masterquentus.hexcraft.entity.client.armor;
 
 import com.masterquentus.hexcraft.item.custom.WitchesArmorItem;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
@@ -13,6 +13,7 @@ public class WitchesArmorRenderer extends GeoArmorRenderer<WitchesArmorItem> {
         this.leftArmBone = "armorLeftArm";
         this.rightLegBone = "armorRightLeg";
         this.leftLegBone = "armorLeftLeg";
-
+        this.rightBootBone = "armorRightBoot";
+        this.leftBootBone = "armorLeftBoot";
     }
 }

@@ -5,6 +5,7 @@ import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
 import com.masterquentus.hexcraft.fluid.HexcraftFluids;
 import com.masterquentus.hexcraft.item.custom.BloodBottleItem;
+import com.masterquentus.hexcraft.item.custom.FlintAndHellFire;
 import com.masterquentus.hexcraft.item.custom.WitchesArmorItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -24,6 +25,12 @@ public class HexcraftItems {
 
     public static final RegistryObject<Item> BLOOD_BOTTLE = ITEMS.register("blood_bottle",
             () -> new BloodBottleItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16)));
+
+    public static final RegistryObject<Item> MAGIC_CRYSTAL = ITEMS.register("magic_crystal",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
+    public static final RegistryObject<Item> FLINT_AND_HELLFIRE = ITEMS.register("flint_and_hellfire", FlintAndHellFire::new);
+
 
     //Spawn Eggs
     public static final RegistryObject<Item> LILITH_SPAWN_EGG = ITEMS.register("lilith_spawn_egg",
@@ -49,6 +56,7 @@ public class HexcraftItems {
     public static final RegistryObject<Item> MANDRAKE_ROOT = ITEMS.register("mandrake_root",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
+
     //Signs
     public static final RegistryObject<Item> EBONY_SIGN = ITEMS.register("ebony_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
@@ -61,6 +69,7 @@ public class HexcraftItems {
     public static final RegistryObject<Item> HELL_BARK_SIGN = ITEMS.register("hell_bark_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.HELL_BARK_SIGN.get(), HexcraftBlocks.HELL_BARK_WALL_SIGN.get()));
+
     //Poppets
     public static final RegistryObject<Item> POPPET = ITEMS.register("poppet",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
